@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900&display=swap');
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf') format('truetype'), url('Lato-Light.ttf') format('truetype'), url('Lato-Bold.ttf') format('truetype');
+} */
+
 * {
     margin: 0;
     padding: 0;
