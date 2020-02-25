@@ -10,7 +10,6 @@ body {
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
     color: #666d89;
-    line-height: 6px;
 }
 
 .portfolio,
@@ -21,13 +20,19 @@ body {
     font-weight: 300;
     line-height: 30px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .portfolio {
     background: #2d303a;
     border-bottom: 6px solid #323746;
     height: 870px;
-    box-sizing: border-box;
+}
+
+.about_us {
+    background: #f2f2f2;
+    line-height: 28px;
+    border-bottom: 6px solid #ffffff;
 }
 
 .portfolio h2,
@@ -37,11 +42,8 @@ body {
     line-height: 15px;
     font-weight: 900;
     box-sizing: border-box;
-}
-
-.about_us {
-    background: #f2f2f2;
-    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .filter-buttons span {
@@ -136,11 +138,12 @@ body {
 }
 
 .about_us .grid {
-    margin-top: 50px;
+    margin-top: 47px;
     display: grid;
     grid-template: 1, 400px / repeat(3, 1fr);
     grid-template-areas: "gr1 gr2 gr3";
     grid-gap: 20px;
+    overflow: hidden;
 }
 
 .about_us .gr1 {
@@ -155,6 +158,18 @@ body {
     grid-area: "gr3";
 }
 
+.about_us .gr1.grid-item::before {
+    background: url("assets/photo3.png") no-repeat;
+}
+
+.about_us .gr2.grid-item::before {
+    background: url("assets/photo1.png") no-repeat;
+}
+
+.about_us .gr3.grid-item::before {
+    background: url("assets/photo.png") no-repeat;
+}
+
 .about_us .grid-item::before {
     content: "";
     display: inline-block;
@@ -162,7 +177,50 @@ body {
     height: 300px;
 }
 
-.about_us p {
-    /* line-height: 20px; */
-    /* font-size: 12px; */
+.about_us .grid h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -0.1px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.about_us .grid p {
+    line-height: 22px;
+    font-size: 12px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.social {
+    margin-top: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.social a {
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+    margin-right: 2px;
+}
+
+.social .fb {
+    background: url("assets/sprite_social.png") -10px -10px no-repeat;
+}
+
+.social .ggl {
+    background: url("assets/sprite_social.png") -63px -10px no-repeat;
+}
+
+.social .twt {
+    background: url("assets/sprite_social.png") -63px -64px no-repeat;
+}
+
+.social .lin {
+    background: url("assets/sprite_social.png") -9px -64px no-repeat;
 }
