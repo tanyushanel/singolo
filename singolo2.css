@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1020px;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #666d89;
+    line-height: 6px;
+}
+
+.portfolio,
+.about_us {
+    padding: 70px 40px;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.portfolio {
+    background: #2d303a;
+    border-bottom: 6px solid #323746;
+    height: 870px;
+    box-sizing: border-box;
+}
+
+.portfolio h2,
+.about_us h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 15px;
+    font-weight: 900;
+    box-sizing: border-box;
+}
+
+.about_us {
+    background: #f2f2f2;
+    line-height: 28px;
+}
+
+.filter-buttons span {
+    display: inline-block;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    margin: 10px 4px;
+    padding: 0 5px;
+    line-height: 20px;
+    white-space: nowrap;
+    font-size: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.filter-buttons span:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+.button:first-child {
+    margin-left: 0px;
+    padding: 0 7px;
+}
+
+.portfolio .grid {
+    display: grid;
+    grid-template: repeat(3, 187px) / repeat(4, 220px);
+    grid-gap: 20px;
+    grid-template-areas: "gr1 gr2 gr3 gr4" "gr5 gr6 gr7 gr8" "gr9 gr10 gr11 gr12";
+}
+
+.portfolio .gr1 {
+    grid-area: "gr1";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -938px -402px;
+}
+
+.portfolio .gr2 {
+    grid-area: "gr2";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -326px -694px;
+}
+
+.portfolio .gr3 {
+    grid-area: "gr3";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -308px;
+}
+
+.portfolio .gr4 {
+    grid-area: "gr4";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -504px -442px;
+}
+
+.portfolio .gr5 {
+    grid-area: "gr5";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -632px;
+}
+
+.portfolio .gr6 {
+    grid-area: "gr6";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -710px -694px;
+}
+
+.portfolio .gr7 {
+    grid-area: "gr7";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -938px -10px;
+}
+
+.portfolio .gr8 {
+    grid-area: "gr8";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -10px;
+}
+
+.portfolio .gr9 {
+    grid-area: "gr9";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -928px;
+}
+
+.portfolio .gr10 {
+    grid-area: "gr10";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -10px -10px;
+}
+
+.portfolio .gr11 {
+    grid-area: "gr11";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -504px -10px;
+}
+
+.portfolio .gr12 {
+    grid-area: "gr12";
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -10px -694px;
+}
+
+.about_us .grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template: 1, 400px / repeat(3, 1fr);
+    grid-template-areas: "gr1 gr2 gr3";
+    grid-gap: 20px;
+}
+
+.about_us .gr1 {
+    grid-area: "gr1";
+}
+
+.about_us .gr2 {
+    grid-area: "gr2";
+}
+
+.about_us .gr3 {
+    grid-area: "gr3";
+}
+
+.about_us .grid-item::before {
+    content: "";
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.about_us p {
+    /* line-height: 20px; */
+    /* font-size: 12px; */
+}
