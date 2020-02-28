@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900&display=swap');
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.ttf') format('truetype'), url('Lato-Light.ttf') format('truetype'), url('Lato-Bold.ttf') format('truetype');
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -78,62 +84,62 @@ body {
 
 .portfolio .gr1 {
     grid-area: "gr1";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -938px -402px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -946px -413px;
 }
 
 .portfolio .gr2 {
     grid-area: "gr2";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -326px -694px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -408px -737px;
 }
 
 .portfolio .gr3 {
     grid-area: "gr3";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -308px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1341px -309px;
 }
 
 .portfolio .gr4 {
     grid-area: "gr4";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -504px -442px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -528px -444px;
 }
 
 .portfolio .gr5 {
     grid-area: "gr5";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -632px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1340px -648px;
 }
 
 .portfolio .gr6 {
     grid-area: "gr6";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -710px -694px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -726px -698px;
 }
 
 .portfolio .gr7 {
     grid-area: "gr7";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -938px -10px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -969px -49px;
 }
 
 .portfolio .gr8 {
     grid-area: "gr8";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -10px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1354px -42px;
 }
 
 .portfolio .gr9 {
     grid-area: "gr9";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -1330px -928px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -1346px -930px;
 }
 
 .portfolio .gr10 {
     grid-area: "gr10";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -10px -10px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -151px -123px;
 }
 
 .portfolio .gr11 {
     grid-area: "gr11";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -504px -10px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -647px -185px;
 }
 
 .portfolio .gr12 {
     grid-area: "gr12";
-    background: url("assets/sprite_icons_portfolio.png") no-repeat -10px -694px;
+    background: url("assets/sprite_icons_portfolio.png") no-repeat -46px -754px;
 }
 
 .about_us .grid {
@@ -158,15 +164,15 @@ body {
 }
 
 .about_us .gr1.grid-item::before {
-    background: url("assets/photo3.png") no-repeat;
+    background: url("assets/photo3.png") 0px -1px no-repeat;
 }
 
 .about_us .gr2.grid-item::before {
-    background: url("assets/photo1.png") no-repeat;
+    background: url("assets/photo1.png") 0px -1px no-repeat;
 }
 
 .about_us .gr3.grid-item::before {
-    background: url("assets/photo.png") no-repeat;
+    background: url("assets/photo.png") 0px -1px no-repeat;
 }
 
 .about_us .grid-item::before {
