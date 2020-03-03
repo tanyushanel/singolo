@@ -19,7 +19,7 @@ body {
 form {
     position: relative;
     background: #f06c64;
-    padding: 64px 40px;
+    padding: 64px 40px 13px;
     font-size: 18px;
     text-align: justify;
     font-weight: 300;
@@ -27,11 +27,13 @@ form {
     overflow: hidden;
     box-sizing: border-box;
     color: #F0D6D6;
+    border-bottom: 6px solid #ea676b;
 }
 
 .form_desc h2,
 .contact_info h3,
-.inputs input {
+.inputs input,
+.social {
     overflow: hidden;
     white-space: nowrap;
 }
@@ -41,7 +43,7 @@ form {
     font-size: 30px;
     line-height: 29px;
     font-weight: 900;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .inputs {
@@ -98,9 +100,6 @@ input.submit:hover {
     width: 300px;
     float: right;
     font-size: 12px;
-    line-height: 22px;
-    max-height: 120px;
-    overflow: hidden;
 }
 
 .contact_info h3 {
@@ -113,8 +112,14 @@ input.submit:hover {
     text-align: left;
 }
 
+.contact_info p {
+    overflow: hidden;
+    line-height: 22px;
+    max-height: 85px;
+}
+
 .contact_info .contact_list {
-    margin-top: 30px;
+    margin-top: 23px;
 }
 
 .contact_list a {
@@ -122,23 +127,72 @@ input.submit:hover {
     line-height: 22px;
     text-decoration: none;
     color: #f0d8d9;
+    letter-spacing: 0.1px;
 }
 
 .contact_list a::before {
     display: inline-block;
     content: "";
-    height: 11px;
-    width: 11px;
+    height: 15px;
+    width: 15px;
+    margin-right: 8px;
 }
 
 a.location::before {
-    background: url("assets/sprite_contacts.png") -10px -41px no-repeat;
+    background: url("assets/sprite_contacts.png") -7px -36px no-repeat;
 }
 
 a.contact_phone::before {
-    background: url("assets/sprite_contacts.png") -10px -10px no-repeat;
+    background: url("assets/sprite_contacts.png") -9px -6px no-repeat;
 }
 
 a.contact_mail::before {
-    background: url("assets/sprite_contacts.png") -41px -10px no-repeat;
+    background: url("assets/sprite_contacts.png") -41px -3px no-repeat;
+}
+
+footer {
+    position: relative;
+    height: 80px;
+    background: #2d303a;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    padding: 30px 41px;
+    color: #656d89;
+    box-sizing: border-box;
+}
+
+.social {
+    margin-top: 25px;
+}
+
+.social a {
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+}
+
+.social .fb {
+    background: url("assets/sprite_social.png") -10px -10px no-repeat;
+}
+
+.social .ggl {
+    background: url("assets/sprite_social.png") -63px -10px no-repeat;
+}
+
+.social .twt {
+    background: url("assets/sprite_social.png") -63px -64px no-repeat;
+}
+
+.social .lin {
+    background: url("assets/sprite_social.png") -9px -64px no-repeat;
+}
+
+footer .social {
+    position: absolute;
+    right: 40px;
+    top: -4px;
+}
+
+footer .social a {
+    margin-left: 3px;
 }
