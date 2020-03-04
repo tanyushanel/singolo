@@ -17,7 +17,7 @@ body {
     word-wrap: break-word;
 }
 
-.form {
+form {
     position: relative;
     background: #f06c64;
     padding: 64px 40px 13px;
