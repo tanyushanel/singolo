@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 
 /* @font-face {
     font-family: 'Lato';
@@ -14,6 +14,7 @@ body {
     width: 1020px;
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
 }
 
 form {
@@ -33,9 +34,15 @@ form {
 .form_desc h2,
 .contact_info h3,
 .inputs input,
+.inputs,
 .social {
     overflow: hidden;
     white-space: nowrap;
+}
+
+.form_desc {
+    max-height: calc(58px + 29px + 20px);
+    overflow: hidden;
 }
 
 .form_desc h2 {
@@ -43,7 +50,7 @@ form {
     font-size: 30px;
     line-height: 29px;
     font-weight: 900;
-    /* box-sizing: border-box; */
+    letter-spacing: -0.1px;
 }
 
 .inputs {
@@ -62,13 +69,14 @@ form {
     color: #F0D6D6;
     margin-bottom: 16px;
     padding: 0 15px;
-    box-sizing: border-box;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .inputs textarea {
     resize: none;
     height: 202px;
+    min-height: 202px;
     overflow: hidden;
 }
 
@@ -92,7 +100,7 @@ input.submit:hover {
 
 .inputs,
 .contact_info {
-    margin-top: 44px;
+    margin-top: 46px;
 }
 
 .contact_info {
@@ -100,6 +108,8 @@ input.submit:hover {
     width: 300px;
     float: right;
     font-size: 12px;
+    max-height: calc(308px + 18px + 63px + 10px + 20px);
+    overflow: hidden;
 }
 
 .contact_info h3 {
@@ -109,45 +119,57 @@ input.submit:hover {
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 900;
-    text-align: left;
+    letter-spacing: -0.1px;
 }
 
 .contact_info p {
-    overflow: hidden;
+    letter-spacing: -0.1px;
     line-height: 22px;
-    max-height: 85px;
 }
 
 .contact_info .contact_list {
-    margin-top: 23px;
+    margin-top: 20px;
 }
 
 .contact_list a {
     display: block;
-    line-height: 22px;
+    line-height: 21px;
     text-decoration: none;
     color: #f0d8d9;
-    letter-spacing: 0.1px;
+    text-align: left;
 }
 
 .contact_list a::before {
     display: inline-block;
     content: "";
-    height: 15px;
+    height: 16px;
     width: 15px;
     margin-right: 8px;
+    vertical-align: middle;
 }
 
 a.location::before {
-    background: url("assets/sprite_contacts.png") -7px -36px no-repeat;
+    background: url("assets/sprite_contacts.png") -7px -40px no-repeat;
 }
 
 a.contact_phone::before {
-    background: url("assets/sprite_contacts.png") -9px -6px no-repeat;
+    background: url("assets/sprite_contacts.png") -9px -9px no-repeat;
 }
 
 a.contact_mail::before {
-    background: url("assets/sprite_contacts.png") -41px -3px no-repeat;
+    background: url("assets/sprite_contacts.png") -41px -5px no-repeat;
+}
+
+.contact_list a.location {
+    letter-spacing: 0.1px;
+}
+
+.contact_list a.contact_phone {
+    letter-spacing: 0px;
+}
+
+.contact_list a.contact_mail {
+    letter-spacing: 0.2px;
 }
 
 footer {
@@ -194,5 +216,5 @@ footer .social {
 }
 
 footer .social a {
-    margin-left: 3px;
+    margin-left: 3.5px;
 }

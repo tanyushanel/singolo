@@ -10,21 +10,27 @@
 
 <body>
     <form name="singolo_form" action="URL" method="POST">
+
         <div class="form_desc">
             <h2>Get a Quote</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="inputs">
-                <input name="user_name" type="text" placeholder="Name (Required)" required>
-                <input name="user_email" type="mail" placeholder="Email (Required)" required>
-                <input name="theme_subject" type="text" placeholder="Subject">
-                <textarea name="textarea_details" placeholder="Describe your project in detail..."></textarea>
-                <input class="submit" name="submit_button" type="submit" title="Submit">
-            </div>
+
         </div>
+        <div class="inputs">
+            <input name="user_name" type="text" placeholder="Name (Required)" maxlength="64" required>
+            <input name="user_email" type="mail" placeholder="Email (Required)" maxlength="64" required>
+            <input name="theme_subject" type="text" placeholder="Subject" maxlength="64">
+
+            <textarea name="textarea_details" placeholder="Describe your project in detail..." maxlength="255"></textarea>
+            <input class="submit" name="submit_button" type="submit" title="Submit">
+        </div>
+
         <aside class="contact_info">
             <h3>Contact Information</h3>
-            <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Fusce vitae aliquam tellus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
+
+
+
             <div class="contact_list">
                 <a class="location" href="https://www.google.com/maps/@32.9987644,-15.6999934,5.25z">Elm St. 14/05 Lost City</a>
                 <a class="contact_phone" href="tel:035983318635">03528 331 86 35</a>
