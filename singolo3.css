@@ -17,7 +17,7 @@ body {
     word-wrap: break-word;
 }
 
-form {
+.form {
     position: relative;
     background: #f06c64;
     padding: 64px 40px 13px;
@@ -133,11 +133,11 @@ input.submit:hover {
     line-height: 22px;
 }
 
-.contact_info .contact_list {
+.contact_info .contact_links {
     margin-top: 20px;
 }
 
-.contact_list a {
+.contact_links a {
     display: block;
     line-height: 21px;
     text-decoration: none;
@@ -145,7 +145,7 @@ input.submit:hover {
     text-align: left;
 }
 
-.contact_list a::before {
+.contact_links a::before {
     display: inline-block;
     content: "";
     height: 16px;
@@ -166,15 +166,15 @@ a.contact_mail::before {
     background: url("assets/sprite_contacts.png") -41px -5px no-repeat;
 }
 
-.contact_list a.location {
+.contact_links a.location {
     letter-spacing: 0.1px;
 }
 
-.contact_list a.contact_phone {
+.contact_links a.contact_phone {
     letter-spacing: 0px;
 }
 
-.contact_list a.contact_mail {
+.contact_links a.contact_mail {
     letter-spacing: 0.2px;
 }
 
