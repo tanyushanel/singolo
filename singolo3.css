@@ -80,6 +80,12 @@ form {
     overflow: hidden;
 }
 
+.inputs input::-webkit-input-placeholder,
+.inputs textarea::-webkit-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    color: #f48c8f;
+}
+
 .inputs input::placeholder,
 .inputs textarea::placeholder {
     font-family: 'Lato', sans-serif;
