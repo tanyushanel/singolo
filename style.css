@@ -99,7 +99,7 @@ h3 {
     color: #FFFFFF;
     text-decoration: none;
     max-width: 80px;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 4px;
 }
 
@@ -233,6 +233,23 @@ h3 {
     line-height: 30px;
     overflow: hidden;
     box-sizing: border-box;
+}
+
+.desc {
+    max-height: calc(2*30px + 20px + 31px);
+    overflow: hidden;
+}
+
+.services .services_grid .desc {
+    max-height: calc(3*21px + 18px + 10px);
+}
+
+.about_us .grid .desc {
+    max-height: calc(2*20px + 18px + 2*10px);
+}
+
+.form .contact_info .desc {
+    max-height: calc(4*22px + 18px + 20px);
 }
 
 
@@ -449,8 +466,6 @@ h3 {
 .about_us .grid p {
     line-height: 20px;
     font-size: 12px;
-    height: 40px;
-    max-height: 40px;
     overflow: hidden;
 }
 
@@ -509,7 +524,12 @@ h3 {
     display: inline-block;
     height: 34px;
     width: 34px;
-    margin: 0 1px;
+    margin: 0px 1px;
+}
+
+.social a:hover {
+    cursor: pointer;
+    transform: scaleX(1.07);
 }
 
 .social .fb {
@@ -546,13 +566,13 @@ h3 {
 }
 
 .no-wrap {
+    margin-top: 44px;
     white-space: nowrap;
 }
 
 .inputs,
 .contact_info {
     display: inline-block;
-    margin-top: 44px;
     vertical-align: top;
     white-space: normal;
     overflow: hidden;
