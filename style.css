@@ -229,10 +229,10 @@
  }
  
  .slider-container {
+     height: 594px;
      position: relative;
      display: flex;
      width: 100%;
-     height: 594px;
      background: #648bf0;
      list-style-type: none;
      overflow: hidden;
@@ -878,6 +878,9 @@
          left: calc(11% + 21% + 21.5%);
          transform: scale(0.75) rotate(90deg);
      }
+     .slider-container {
+         height: 594px;
+     }
      .slide-img.scnd {
          transform: scale(0.75);
          width: 200%;
@@ -923,6 +926,9 @@
      .logo.burger-active {
          margin-left: 20px;
          z-index: 10;
+     }
+     .slider-container {
+         height: 594px;
      }
      .slider-img {
          border: none;
@@ -1011,10 +1017,6 @@
          grid-template: repeat(6, 120px) / repeat(1, 1fr);
          grid-template-areas: "art1" "art2 " "art3" "art4 " "art5" "art6";
      }
-     /* .slider-container {
-         background-color: #648bf0;
-         z-index: 0;
-     } */
      .frst .phone.vertical {
          left: -10%;
          transform: scale(0.33);
@@ -1022,6 +1024,9 @@
      .frst .horizont.phone {
          left: 33%;
          transform: scale(0.33) rotate(90deg);
+     }
+     .slider-container {
+         height: 594px;
      }
      .slide-img.scnd {
          transform: scale(0.33);
