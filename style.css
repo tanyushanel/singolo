@@ -442,7 +442,6 @@
      height: auto;
      list-style-type: none;
      overflow: hidden;
-     height: 60vh;
  }
  
  .slide-img {
@@ -770,7 +769,6 @@
  
  .portfolio .grid {
      display: flex;
-     display: -webkit-flex;
      flex-wrap: wrap;
      justify-content: center;
      margin-bottom: -15px;
@@ -1067,7 +1065,7 @@
  @media (min-width: 1020px) {
      .portfolio .grid {
          flex: 1 0 23%;
-         width: 23%;
+         /* width: 23%; */
      }
      .portfolio .gr:nth-child(4n) {
          margin-right: 0px;
