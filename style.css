@@ -220,213 +220,6 @@
          display: none;
      }
  }
- 
- .slides {
-     display: flex;
-     position: relative;
-     overflow: hidden;
-     width: 1020px;
-     height: 100%;
- }
- 
- @media (max-width: 1019px) {
-     .slides .phones {
-         transform: scale(0.75);
-     }
- }
- 
- @media (max-width: 767px) {
-     .slides .phones {
-         transform: scale(0.3681);
-     }
-     .slides .phones .phone_vertical {
-         margin-right: 70px;
-     }
- }
- 
- @media (max-width: 374px) {
-     .slides .phones {
-         transform: scale(0.33);
-     }
-     .slides .phones .phone_vertical {
-         margin-right: 20px;
-     }
- }
- 
- .slider__slide {
-     position: absolute;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 100%;
-     width: 100%;
- }
- 
- .slider__slide.slide-1 {
-     left: 0%;
-     background-color: #f06c64;
-     border-bottom: 6px solid #ea676b;
- }
- 
- @media (max-width: 1019px) {
-     .slider__slide.slide-1 {
-         border-width: calc(100vw * 0.0059);
-     }
- }
- 
- .slider__slide.slide-1 .phones {
-     display: flex;
-     position: relative;
-     justify-content: space-between;
-     align-items: center;
-     height: 483px;
-     width: 796px;
-     margin: 0 auto;
- }
- 
- .slider__slide.slide-2 {
-     left: 100%;
-     background-color: #648BF0;
-     border-bottom: 6px solid #5485F0;
- }
- 
- @media (max-width: 1019px) {
-     .slider__slide.slide-2 {
-         border-width: calc(100vw * 0.0059);
-     }
- }
- 
- .slider__slide.slide-2 .phones {
-     display: flex;
-     position: relative;
-     justify-content: center;
-     height: 513px;
-     width: 518px;
- }
- 
- .slider__slide.slide-2 .phones .phone:nth-child(even) {
-     transform-origin: right top;
-     transform: scale(1.062);
-     z-index: 5;
- }
- 
- .slider__slide.slide-2 .phones .phone:nth-child(odd) {
-     transform-origin: center 65%;
-     transform: scale(0.6501);
-     opacity: 0.5;
-     align-self: stretch;
- }
- 
- .slider__slide.slide-2 .phones .phone:nth-child(1) {
-     margin-right: 15px;
- }
- 
- .slider__slide.slide-2 .phones .phone:nth-child(3) {
-     margin-left: 38px;
- }
- 
- .phone_btn {
-     position: absolute;
-     width: 36px;
-     height: 36px;
-     cursor: pointer;
-     border: 1px solid #FAFAFA00;
-     border-radius: 50%;
-     z-index: 5;
- }
- 
- .phone_vertical .phone_btn {
-     left: 37.4%;
-     bottom: 7.8%;
- }
- 
- .phone_horizontal .phone_btn {
-     left: 2.3%;
-     bottom: 48.5%;
- }
- 
- .slide-2 .phone:nth-child(even) .phone_btn {
-     left: 90px;
-     bottom: 7.8%;
- }
- 
- .phone_vertical {
-     position: relative;
-     height: 483px;
-     width: 240px;
- }
- 
- .phone_vertical .phone_base {
-     position: absolute;
-     left: 0;
-     top: -2px;
-     height: 458px;
-     width: 216px;
-     background: url("./assets/images/phone-base.png");
-     background-repeat: no-repeat;
-     z-index: 2;
- }
- 
- .phone_vertical .phone_screen {
-     position: absolute;
-     left: 14px;
-     top: 63px;
-     height: 333px;
-     width: 188px;
-     background: url("./assets/images/screen-vertical.png");
-     background-repeat: no-repeat;
-     z-index: 3;
- }
- 
- .phone_vertical .phone_shadow {
-     position: absolute;
-     left: 0;
-     top: -2px;
-     height: 483px;
-     width: 240px;
-     background: url("./assets/images/phone-vertical-shadow.png");
-     background-repeat: no-repeat;
-     z-index: 1;
- }
- 
- .phone_horizontal {
-     position: relative;
-     width: 483px;
-     height: 240px;
- }
- 
- .phone_horizontal .phone_base {
-     position: absolute;
-     top: 0;
-     right: 25px;
-     width: 458px;
-     height: 216px;
-     background: url("./assets/images/phone-base-horizontal.png");
-     background-repeat: no-repeat;
-     z-index: 2;
- }
- 
- .phone_horizontal .phone_screen {
-     position: absolute;
-     right: 90px;
-     top: 14px;
-     height: 188px;
-     width: 333px;
-     background: url("./assets/images/screen-horizontal.png");
-     background-repeat: no-repeat;
-     z-index: 3;
- }
- 
- .phone_horizontal .phone_shadow {
-     position: absolute;
-     right: 0;
-     top: 0;
-     height: 240px;
-     width: 483px;
-     background: url("./assets/images/phone-horizontal-shadow.png");
-     background-repeat: no-repeat;
-     z-index: 1;
- }
  /* Slider phone */
  
  .slider-section {
@@ -439,7 +232,8 @@
      position: relative;
      display: flex;
      width: 100%;
-     height: auto;
+     height: 594px;
+     background: #648bf0;
      list-style-type: none;
      overflow: hidden;
  }
@@ -529,7 +323,7 @@
  
  .scnd .vertical .screen {
      background-image: none;
-     top: 74px;
+     top: 56px;
      left: 3px;
      width: 200px;
      height: 354px;
@@ -1084,16 +878,11 @@
          left: calc(11% + 21% + 21.5%);
          transform: scale(0.75) rotate(90deg);
      }
-     .slider-container {
-         background: #648bf0;
-         z-index: 0;
-         height: calc(100vw * 0.58823);
-     }
-     .slide-img {
-         border: none;
-     }
      .slide-img.scnd {
          transform: scale(0.75);
+         width: 200%;
+         left: -50%;
+         border: none;
      }
      .services_grid {
          grid-template: repeat(2, 120px) / repeat(2, 2fr);
@@ -1138,9 +927,6 @@
      .slider-img {
          border: none;
      }
-     .slider-container {
-         background: #648bf0;
-     }
      .slider-arrow {
          width: 19px;
          height: 5px;
@@ -1165,7 +951,9 @@
          transform: scale(0.3681) rotate(90deg);
      }
      .slide-img.scnd {
-         transform: scale(0.3681);
+         transform: scale(0.4);
+         width: 200%;
+         left: -50%;
          border: none;
      }
      .services_grid {
@@ -1223,10 +1011,10 @@
          grid-template: repeat(6, 120px) / repeat(1, 1fr);
          grid-template-areas: "art1" "art2 " "art3" "art4 " "art5" "art6";
      }
-     .slider-container {
+     /* .slider-container {
          background-color: #648bf0;
          z-index: 0;
-     }
+     } */
      .frst .phone.vertical {
          left: -10%;
          transform: scale(0.33);
@@ -1235,11 +1023,11 @@
          left: 33%;
          transform: scale(0.33) rotate(90deg);
      }
-     .slide-img {
-         border: none;
-     }
      .slide-img.scnd {
          transform: scale(0.33);
+         width: 200%;
+         left: -50%;
+         border: none;
      }
      .slider-arrow {
          width: 19px;
