@@ -1,11 +1,39 @@
 window.onload = function() {
-    subscribeClick();
+    window.scrollTo(0, 0);
+
     subcribeSlide(nextSlide, prevSlide);
-    document.querySelectorAll('.menu-item').forEach(ele => ele.addEventListener('click', switchElem));
+
+    document.querySelectorAll('.menu-item').forEach(ele => ele.addEventListener('click', scrollToChapter));
     document.querySelectorAll('.screen').forEach(ele => ele.addEventListener('click', turnOffScreen));
     document.querySelectorAll('.buttn').forEach(ele => ele.addEventListener('click', turnOffScreenFromLink));
     document.querySelectorAll('.gr').forEach(ele => ele.addEventListener('click', switchImg));
     document.forms.singolo_form.addEventListener('submit', submitForm);
+    document.querySelector('.close').addEventListener('click', closeModal);
+
+    document.querySelectorAll('.filter-buttons .button').forEach(el => el.addEventListener('click', switchFilter));
+
+    //opening burger menu
+    document.querySelector('.hamburger').addEventListener('click', (e) => {
+        e.currentTarget.classList.toggle('active');
+        document.getElementById('menu').classList.toggle('active');
+        document.querySelector('.logo').classList.toggle('burger-active');
+    });
+
+    //close burger menu
+    document.addEventListener('click', (e) => {
+        let isBurgerActive = document.querySelector('.hamburger').classList.contains('active');
+        if (isBurgerActive && e.target.tagName === 'A' || e.target.tagName === 'NAV') {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('menu').classList.toggle('active');
+            document.querySelector('.logo').classList.toggle('burger-active');
+        }
+    }, true);
+}
+
+function scrollToChapter() {
+    document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+    this.classList.toggle('active');
+    window.scrollTo(0, 0);
 }
 
 let current = 1;
@@ -31,23 +59,26 @@ function subcribeSlide(nextSlide, prevSlide) {
 }
 
 function switchFilter() {
-    document.querySelectorAll('.button').forEach(el => el.classList.remove('active'));
-    this.classList.toggle('active');
-}
+    let clickHandler = function(elem) {
+        elem.addEventListener('click', function() {
+            navPortfolio.forEach(el => el.classList.remove('active'));
+            elem.classList.toggle('active');
+            let portfolioImages = document.querySelectorAll('.portfolio .grid img');
+            let firstElemSrc = portfolioImages[0].src;
 
-function subscribeClick() {
-    let grid = document.querySelector('.portfolio .grid');
-    document.querySelector('.all').addEventListener('click', () => grid.style.flexDirection = 'row');
-    document.querySelector('.web-design').addEventListener('click', () => grid.style.flexDirection = 'row-reverse');
-    document.querySelector('.graph-design').addEventListener('click', () => grid.style.flexDirection = 'column');
-    document.querySelector('.art').addEventListener('click', () => grid.style.flexDirection = 'column-reverse');
-    document.querySelectorAll('.button').forEach(el => el.addEventListener('click', switchFilter));
-
-}
-
-function switchElem() {
-    document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
-    this.classList.toggle('active');
+            for (let i = 0; i < portfolioImages.length; i++) {
+                if (i == portfolioImages.length - 1) {
+                    portfolioImages[i].src = firstElemSrc;
+                } else {
+                    portfolioImages[i].src = portfolioImages[i + 1].src;
+                }
+            }
+        })
+    }
+    let navPortfolio = document.querySelectorAll('.filter-buttons .button');
+    for (let i = 0; i < navPortfolio.length; i++) {
+        clickHandler(navPortfolio[i]);
+    }
 }
 
 function switchImg() {
@@ -65,17 +96,22 @@ function turnOffScreenFromLink(e) {
 
 function submitForm(e) {
     e.preventDefault();
-    alert('Message is sent');
 
     let theme = document.getElementById('theme_subject').value;
-    theme ?
-        theme.toLowerCase() === 'singolo' ? alert('Theme: Singolo') : alert(theme.substr(0, 20) + '...') :
-        alert('Without theme');
-
     let description = document.getElementById('textarea_details').value;
-    description ?
-        description.toLowerCase() === 'portfolio project' ? alert('Description: Portfolio project') : alert(description.substr(0, 20) + '...') :
-        alert('Without description');
-    this.reset();
 
+    document.querySelector('.modal_text').innerHTML = `The letter was sent <br>
+    ${theme ?
+        theme.toLowerCase() === 'singolo' ? 'Theme: Singolo' : 'Theme: ' + theme.substr(0, 20) + '...' :
+        'Without theme'}<br>
+    ${ description ?
+        description.toLowerCase() === 'portfolio project' ? 'Description: Portfolio project' : 'Description: ' + description.substr(0, 20) + '...' :
+       'Without description'}`;
+    document.querySelector('.modal').style.display = 'block';
+    this.reset();
+}
+
+function closeModal() {
+    document.querySelector('.modal').style.display = 'none';
+    document.forms.singolo_form.reset();
 }
